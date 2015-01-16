@@ -44,11 +44,24 @@ define these value changes by defining the final value and a timestamp.
 For example, for the rotation of our arm we could define three
 time-value pairs:
 
-|Seconds| Rotation in Degrees
-|-------|---------------------
-|0      |0
-|1      |90
-|2      |0
+<table>
+  <tr>
+    <th>Seconds</th>
+    <th>Rotation in Degrees</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>0</td>
+  </tr>
+</table>
 
 The special thing about keyframe based animations is that the values
 between the defined timestamps are
