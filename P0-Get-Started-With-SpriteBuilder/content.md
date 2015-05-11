@@ -28,7 +28,7 @@ like:
 You can access the code for the completed tutorial on
 [GitHub](https://github.com/MakeSchool/Spritebuilder-Getting-Started)!
 
-[![GitHub](./Github.png)](https://github.com/MakeSchool/Spritebuilder-Getting-Started)
+[![GitHub](./Github.png)](https://github.com/MakeSchool/PeevedPenguins-Spritebuilder)
 
 Installation
 ============
