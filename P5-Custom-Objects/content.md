@@ -29,7 +29,7 @@ the bottom of the screen. Once you have selected the CCSprite, go to the
 right pane and set the "Sprite Frame" property to the
 *flyingpenguin.png* image:
 
-![image](./Spritebuilder_Sprite_Frame.png)
+![image](./SpriteBuilder_Sprite_Frame.png)
 
 Now you should see the penguin image on the center of the stage.
 
@@ -93,7 +93,7 @@ bar: File\>New\>File\>Objective-C Class) called "Penguin" and "Seal" and
 make them subclasses of CCSprite because the root nodes of Penguin.ccb
 and Seal.ccb are CCSprites as well:
 
-![image](./SpriteBuilder_Penguin_Xcode.png)
+![image](./SpriteBuilder_Xcode_Penguin.png)
 
 Please create the new file in the *Source* Folder of your project to
 keep a consistent structure:
