@@ -94,7 +94,7 @@ the *\_physicsNode* variable):
 
 and add these lines to the end of the method *didLoadFromCCB*:
 
-    CCScene *level = [CCBReader load:@"Levels/Level1"];
+    CCNode *level = [CCBReader load:@"Levels/Level1"];
     [_levelNode addChild:level];
 
 This will load *level1* and add it as a child to the levelNode. When you
