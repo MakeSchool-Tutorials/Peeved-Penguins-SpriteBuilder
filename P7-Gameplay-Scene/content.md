@@ -19,7 +19,7 @@ include .ccb files in other .ccb files. This is a *super* powerful
 feature, and we will make extensive use of it. Drag a *Sub File* Node
 from the *Node Library* to the stage. Select *bear.ccb* as *CCB File*:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_SubCCBFile.png)
+![image](./Spritebuilder_SubCCBFile.png)
 
 Now the bear sprite, including the animation we defined earlier, is part
 of the Gameplay scene!
@@ -37,7 +37,7 @@ Now publish your SpriteBuilder project and run it in the Simulator.
 After the hitting the play button you should see something similar to
 this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Gameplay1.gif)
+![image](./Gameplay1.gif)
 
 Shoot some penguins
 ===================
@@ -59,7 +59,7 @@ want to assign it to *Doc root var* with the variable name
 "\_physicsNode". This will link this physics node to a variable called
 "\_physicsNode" of the class "Gameplay":
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Physic_CodeOutlets.gif)
+![image](./Physic_CodeOutlets.gif)
 
 Now we will be able to access the physics node from code. That will
 allow us to add the fired penguins to the scene.
@@ -95,7 +95,7 @@ process touches and launch penguins:
     }
 
     // called on every touch in this scene
-    - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
         [self launchPenguin];
     }
 
@@ -104,10 +104,10 @@ process touches and launch penguins:
         CCNode* penguin = [CCBReader load:@"Penguin"];
         // position the penguin at the bowl of the catapult
         penguin.position = ccpAdd(_catapultArm.position, ccp(16, 50));
-        
+
         // add the penguin to the physicsNode of this scene (because it has physics enabled)
         [_physicsNode addChild:penguin];
-        
+
         // manually create & apply a force to launch the penguin
         CGPoint launchDirection = ccp(1, 0);
         CGPoint force = ccpMult(launchDirection, 8000);
@@ -118,4 +118,4 @@ The explanation for this code is within the comments. However, it is
 surprisingly simple. When you run your app now and touch the screen, you
 should see penguins flying across the landscape:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/FiringPenguins.gif)
+![image](./FiringPenguins.gif)
