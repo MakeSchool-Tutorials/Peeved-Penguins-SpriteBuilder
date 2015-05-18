@@ -3,7 +3,7 @@ title: Add Physics using Chipmunk, Part 1
 slug: spritebuilder-physics
 ---
 
-Now things are going to get real. We are going to implement a 
+Now things are going to get real. We are going to implement a
 shooting mechanism. First I'll get started with a short introduction to
 some of the basics you'll need for this step.
 
@@ -20,18 +20,18 @@ Don't understand why you need joints yet? I'll give you a showcase. Open
 Note that you can add edge points to the shape of a physics body by
 clicking on a line and dragging a point out:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_PhysicsBody_Catapult.png)
+![image](./Spritebuilder_PhysicsBody_Catapult.png)
 
 Please be sure that the catapult arm and the catapult are children of
 your physics node. Every physics object in SpriteBuilder needs to be
 under a physics node:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_structure_physicsNode.png)
+![image](./SpriteBuilder_structure_physicsNode.png)
 
 Now publish and run. After a couple of seconds your scene will look
 similar to this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Joints_Example.png)
+![image](./Spritebuilder_Joints_Example.png)
 
 The catapult falls apart because we aren't using joints to keep it
 connected! The good news is, that since SpriteBuilder 1.1, we can create joints directly in the editor, making the next step really easy.
@@ -43,9 +43,9 @@ First, let's revise the physics body for the catapult. Make the catapult
 (not the arm!) a **static body** in the right panel. We don't want the
 catapult to move around through the scene.
 
-Now, let's add the joint. Three different joints are available in the Node Library (the third tab in the left panel). Right now we want to use *Physics Pivot Joint*. That type of joint connects to physics bodies at a single point. Drag the joint to the position where you want to connect the two physics bodies. Once you dragged the physics joint to the stage you will see two dots below the joint. Click into each of these dots and drag the mouse pointer to the physics object that shall be connected by this joint: 
+Now, let's add the joint. Three different joints are available in the Node Library (the third tab in the left panel). Right now we want to use *Physics Pivot Joint*. That type of joint connects to physics bodies at a single point. Drag the joint to the position where you want to connect the two physics bodies. Once you dragged the physics joint to the stage you will see two dots below the joint. Click into each of these dots and drag the mouse pointer to the physics object that shall be connected by this joint:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/pivot_joint.gif)
+![image](./pivot_joint.gif)
 
 This way you set up the catapult and the catapult arm to be connected in one single point. You can also change which bodies are connected by a joint by selecting the joint and changing the property in the right panel.
 
@@ -58,7 +58,7 @@ Next, open *Gameplay.m* in Xcode. We're going to activate physics debug drawing.
 
 Now it's time to run the game and hope that the catapult does not fall apart. Instead the result should look similar to this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_FirstJoint_2.png)
+![image](./Spritebuilder_FirstJoint_2.png)
 
 The catapult falls to the right because the physics body is larger there
 (due to the bowl). Next, we are going to bring it back in it's default
@@ -84,22 +84,22 @@ Open *Gameplay.ccb* in Spritebuilder. Drag a CCNode to the stage and
 place it above the catapult. *Make sure it is a child of the
 CCPhysicsNode*. Also create a code connection called *\_pullbackNode*:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_PullbackNode.png)
+![image](./Spritebuilder_PullbackNode.png)
 
 The node should be placed at (233.0, 285.0).
 You also need to enable physics for this node, making it a static body
 with no size (we just want this node to sit there and hold the catapult
 arm):
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_PullbackNode2.png)
+![image](./Spritebuilder_PullbackNode2.png)
 
 Now we need add a joint between the invisible node and the catpult arm. This joint wil hold the catapult arm in its upright position. For this connection we will be using a *Physics Spring Joint*, because as you will see later, this will be a loosely connected and not a very stiff joint. Select it from the Node Library and drag it to the stage. Since the *_pullbackNode* doesn't have a size, we need to drag the joint connection point to the timeline to connect to this node. We drag the second connection to the catapult arm:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/spring_joint.gif)
+![image](./spring_joint.gif)
 
 Now the spring joint is added, but you can see that is oddly placed. We want the joint to pull the catapult straight upwards, currently the joint between the catapult arm and our hidden node is skew. We can change the connection points between the ends of the joints and the physics bodies by changing the *anchor point* values of the joint. This can be either done by dragging the ends of the joint visually on the stage, or by setting the values explicitly in the inspector on the right. For this tutorial we are going to provide the values for you, to ensure we experience the same results. Select the spring joint and enter the following values on the right panel:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/spring_joint_setup.png)
+![image](./spring_joint_setup.png)
 
 So here's what happening when you set all of these values. First we are setting the anchor points, that simply changes the two end points of the joint. Next, we are enabling a setting called *Rest length* by checking the *enabled* checkbox. Then we set the *Rest length* to *50.00*. The rest length defines the length the spring joint wants to expand or contract to. With *50.00* we are choosing a rest length that is a little bit smaller than the distance between our hidden node and the catapult arm. That leads to a small amount of tension on the spring joint which pulls the catapult arm in the upright position. Finally we set *Damping* to *60.00* and *Stiffness* to *500.00*. You find the appopriate values for these two properties by trying different values and testing the gameplay, for this tutorial you can go with the values that we figured out for you!
 
@@ -118,7 +118,7 @@ Add these lines to *didLoadFromCCB* to deactivate collisions for the *_pullbackN
 
 Your result should be similar to this one:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_PullbackNode3.png)
+![image](./Spritebuilder_PullbackNode3.png)
 
 Now you have added the first artificial, invisible, physical force to
 your game! As you can imagine, a lot of cool effects can be implemented
@@ -171,13 +171,13 @@ This is the new one:
     -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
     {
         CGPoint touchLocation = [touch locationInNode:_contentNode];
-        
+
         // start catapult dragging when a touch inside of the catapult arm occurs
         if (CGRectContainsPoint([_catapultArm boundingBox], touchLocation))
         {
             // move the mouseJointNode to the touch position
             _mouseJointNode.position = touchLocation;
-            
+
             // setup a spring joint between the mouseJointNode and the catapultArm
             _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
         }
@@ -233,7 +233,7 @@ Now we are going to call this method from the *touchEnded* and
 Now double check you have applied all changes correctly. Then run the
 game and take a look at the results:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/snap.gif)
+![image](./snap.gif)
 
 Great! Now you are really close to completing the shooting mechanism.
 Move on to the next chapter to make these penguins fly.
