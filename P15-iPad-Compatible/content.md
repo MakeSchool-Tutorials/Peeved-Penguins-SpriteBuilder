@@ -23,14 +23,14 @@ the high-res art.
 Open your SpriteBuilder project and remove the two old asset folders you
 added throughout this tutorial:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_DeleteOldAssets.png)
+![image](./SpriteBuilder_DeleteOldAssets.png)
 
 Next, add the new assets you just downloaded. Drag the *animation* and
 the *PeevedPenguinsAssets* folder to the SpriteBuilder project - one at
 a time. When you added both folders make the *PeevedPenguinsAssets* a
 smart sprite sheet again:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_AddNewiPadAssets.png)
+![image](./SpriteBuilder_AddNewiPadAssets.png)
 
 Note that you might have to save / re-open your CCB files for the
 "missing texture" errors to disappear.
@@ -39,13 +39,13 @@ To avoid that images get scaled up on the iPad we need to let
 SpriteBuilder know that we are providing *4x* assets now. Let's update
 our project settings:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilderSettings4x.png)
+![image](./SpriteBuilderSettings4x.png)
 
 Great, we're already half way through the process of making our game
 iPad compatible. Publish your changes and run the game on an *iPad
 simulator*. The game should look like this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_iPad.png)
+![image](./SpriteBuilder_iPad.png)
 
 This is already really neat. However, two things are off:
 
@@ -64,7 +64,7 @@ the root node is currently still defined in *UI Points*. *UI Points* do
 not scale up on larger devices. Let's change the size of the
 *Gameplay.ccb* root node in SpriteBuilder:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_RootNodeSize.png)
+![image](./SpriteBuilder_RootNodeSize.png)
 
 We always want to use the full height of the screen, so we choose a *100
 %* height. The width of the Gameplay scene should not exceed the
@@ -81,13 +81,13 @@ button to be the top left corner and set the anchor point to the top
 left, too (0.0, 1.0). Then we use the position to define the distance to
 the top left corner. We choose (10,10):
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_ButtonPosition.png)
+![image](./SpriteBuilder_ButtonPosition.png)
 
 Now the button's position will always be defined from the top left
 corner of the screen. That will improve the layout on the iPad a lot.
 Publish the changes & run the game:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_iPad_improved.png)
+![image](./SpriteBuilder_iPad_improved.png)
 
 Well done!
 ==========
