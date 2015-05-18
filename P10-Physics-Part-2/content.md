@@ -31,7 +31,7 @@ scoop of the catapult arm. Therefore add these lines to *touchBegan*
     [_physicsNode addChild:_currentPenguin];
     // we don't want the penguin to rotate in the scoop
     _currentPenguin.physicsBody.allowsRotation = FALSE;
-    
+
     // create a joint to keep the penguin fixed to the scoop until the catapult is released
     _penguinCatapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_currentPenguin.physicsBody bodyB:_catapultArm.physicsBody anchorA:_currentPenguin.anchorPointInPoints];
 
@@ -54,7 +54,7 @@ this code inside the if-statement):
         // releases the joint and lets the penguin fly
         [_penguinCatapultJoint invalidate];
         _penguinCatapultJoint = nil;
-        
+
         // after snapping rotation is fine
         _currentPenguin.physicsBody.allowsRotation = TRUE;
 
@@ -71,7 +71,7 @@ tuning now (an important part of building physics games). Spritebuilder
 makes it very easy to change different physics properties, such as
 density, friction, etc.:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_tuning.png)
+![image](./Spritebuilder_tuning.png)
 
 Well done! Now you have a first fully playable prototype. In the next
 chapter we will start turning this into an actual game.
