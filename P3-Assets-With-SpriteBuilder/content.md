@@ -5,7 +5,7 @@ slug: resources-spritebuilder
 
 If you haven't already, create a new project in SpriteBuilder. Don't
 forget you can access the code for the completed game on
-[GitHub](https://github.com/MakeGamesWithUs/Spritebuilder-Getting-Started)!
+[GitHub](https://github.com/MakeSchool/PeevedPenguins-Spritebuilder)!
 
 Get started by downloading the [Peeved Penguins art
 pack](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/PeevedPenguinsAssets.zip)
@@ -18,7 +18,7 @@ Drag the PeevedPenguinsAssets folder into the Resources pane (the empty
 space under MainScene.ccb). This will copy the assets to the correct
 location:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Import_Resources.png)
+![image](./Spritebuilder_Import_Resources.png)
 
 Adjust the autoscaling settings
 ===============================
@@ -39,7 +39,7 @@ assets are provided as 2x assets (retina resolution) so we have to
 change this setting for our project. Open File \> Project Settings and
 change Default scaling to 2x (phonehd):
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Autosizing.png)
+![image](./SpriteBuilder_Project_Settings.png)
 
 Now, when you publish through SpriteBuilder, it will auto-generate
 non-retina iPhone assets.
@@ -56,14 +56,14 @@ will speed things up when your game is running.
 To transform your Peeved Penguin Assets into a spritesheet, you need to
 right-click onto the folder and select *Make Smart Sprite Sheet*:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_SmartSpriteSheet1.png)
+![image](./SpriteBuilder_Build_Sprite_Sheet.png)
 
 After this your folder's icon should become pink. Now hit the publish
 button. That will generate your smart sprite sheet. If everything worked
 out you will see a nice preview of your sprite sheet when you select it
 in the resource pane:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_SmartSpriteSheet2.png)
+![image](./SpriteBuilder_Published_Sprite_Sheet.png)
 
 Now you know how to add resources to your game and use some of the neat
 optimizations that come with SpriteBuilder.

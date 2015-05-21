@@ -18,7 +18,7 @@ add the *ground* to the *CCPhysicsNode* and setup a physics body for it.
 Drag the *ground* node onto the *CCPhysicsNode* in the timeline. After
 that your arrangement should look like this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_PhysicsNode.png)
+![image](./Spritebuilder_PhysicsNode.png)
 
 With the ground selected, open up the physics tab in the properties pane
 (third tab in right pane). Enable physics and set it to "static". Static
@@ -29,7 +29,7 @@ Since our ground is not flat, we need to contract it’s bounds a bit.
 Otherwise we would have floating objects in some places. Do this by
 moving the pink corners down a few pixels.
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/ground.png)
+![image](./ground.png)
 
 Now we have a solid ground that will stop objects from falling into
 oblivion.
@@ -57,7 +57,7 @@ a CCPhysicsNode).
 
 Apply the following dimensions: x:469, y:47, width:490, height:275:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_LevelNode.png)
+![image](./Spritebuilder_LevelNode.png)
 
 This node will be the container for the levels we will be loading later
 on. The actual loading will happen in code, so create a code connection
@@ -71,7 +71,7 @@ Inside that Folder create a new Interface File. Call it "Level1", as SpriteBuild
 
 Your first level and the folder structure should look like this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Levels.png)
+![image](./Spritebuilder_Levels.png)
 
 Congratulations, this is your first level! Now add some content. Pull
 multiple *seal.ccb* files and different images of ice blocks
@@ -80,7 +80,7 @@ very left edge of the level (this way they will be visible when we load
 the level - even before we have implemented a scrolling mechanism). Your
 scene could look somewhat like this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_FirstLevel.png)
+![image](./Spritebuilder_FirstLevel.png)
 
 **Add level loading code**
 
@@ -94,13 +94,13 @@ the *\_physicsNode* variable):
 
 and add these lines to the end of the method *didLoadFromCCB*:
 
-    CCScene *level = [CCBReader load:@"Levels/Level1"];
+    CCNode *level = [CCBReader load:@"Levels/Level1"];
     [_levelNode addChild:level];
 
 This will load *level1* and add it as a child to the levelNode. When you
 run your game you should see your level appear in the Gameplay scene:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_LevelLoadingWorks.png)
+![image](./Spritebuilder_LevelLoadingWorks.png)
 
 Scrolling the scene
 ===================
@@ -136,7 +136,7 @@ the bounding box of the scene to define the world boundaries.
 
 Run your game again and you'll see the camera following the penguin:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Scrolling.gif)
+![image](./Scrolling.gif)
 
 As you can see the penguin does not collide with the ice blocks yet.
 That's because they aren't physics objects at the moment. Let's change
@@ -150,12 +150,12 @@ block and enable physics for it. Remember that you can drag the pink
 dots to change the form of the physics body. You should do this if you
 use the tapered block in your level:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_TaperedBlocks.png)
+![image](./Spritebuilder_TaperedBlocks.png)
 
 Once you're done; publish your SpriteBuilder project and run it again.
 You now should be able to collide with the ice blocks:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Collision.png)
+![image](./Spritebuilder_Collision.png)
 
 Adding a level reset
 ====================
@@ -166,7 +166,7 @@ restart easily. Let's add a button to reset the level.
 Open *Gameplay.ccb* in SpriteBuilder. Drag a button to the left top of
 the screen. Set a title and a code connection for the button.
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Retry_Button.png)
+![image](./Spritebuilder_Retry_Button.png)
 
 The implementation is pretty easy. We are just going to reload the
 entire scene utilizing the *CCDirector*. Add this implementation to
@@ -201,7 +201,7 @@ except the button* onto the content node to make them a child of the
 content node. When you're done your scene hierarchy should look like
 this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_rearrangeContentNode.png)
+![image](./Spritebuilder_rearrangeContentNode.png)
 
 OK, you're halfway through this. We've restructured the scene but this
 doesn't change anything yet. We're still scrolling past the restart

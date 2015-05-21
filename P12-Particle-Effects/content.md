@@ -13,11 +13,11 @@ Create a new particle effect in SpriteBuilder
 
 In SpriteBuilder create a new file:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Particle_SealExplosion.png)
+![image](./Spritebuilder_Particle_SealExplosion.png)
 
 Now Spritebuilder will create and open a default particle effect:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_DefaultParticleEffect.png)
+![image](./Spritebuilder_DefaultParticleEffect.png)
 
 When you open the rightmost tab in the right pane you will see a library
 of other default particle effects. Often choosing an effect from this
@@ -30,7 +30,7 @@ that looks very similar to the one in angry birds. You can either copy
 our values from the image below or create a complete own particle
 effect:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Smoke.png)
+![image](./Spritebuilder_Smoke.png)
 
 If you don't feel like building your own particle effect now, [you can
 download the one we
@@ -61,7 +61,7 @@ Extend our *sealRemoved* method to look like this:
     explosion.position = seal.position;
     // add the particle effect to the same node the seal is on
     [seal.parent addChild:explosion];
-    
+
     // finally, remove the destroyed seal
     [seal removeFromParent];
 
@@ -73,13 +73,13 @@ running automatically, as soon as they are added to a scene.
 When you run your game and eliminate seals you should see them go up
 into smoke:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_ParticleEffect_InAction.png)
+![image](./Spritebuilder_ParticleEffect_InAction.png)
 
 As you can see in the screenshot above, I have added some static ice
 blocks to the right end of my level, to avoid penguins and seals leaving
 the level:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_StaticIceblocks.png)
+![image](./Spritebuilder_StaticIceblocks.png)
 
 You can do this, too. It increases the chance of seals being eliminated.
 

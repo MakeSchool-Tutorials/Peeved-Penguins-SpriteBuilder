@@ -91,7 +91,7 @@ Now add this method to *Gameplay.m*:
 Run the game and cause a collision with a seal. You should see the log
 message appear in the console.
 
-Remove a seal when it get's hit hard
+Remove a seal when it gets hit hard
 ====================================
 
 Now that we know that the collision handler is working, let's implement

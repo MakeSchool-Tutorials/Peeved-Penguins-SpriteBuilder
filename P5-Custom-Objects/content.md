@@ -21,7 +21,7 @@ Create a new interface file (Top bar: File\>New\>File) and make sure
 that you create it at the root level of the project. Choose Sprite as
 the root node:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Penguin.png)
+![image](./Spritebuilder_Penguin.png)
 
 Now you need to set an image for the penguin. The easiest way is to
 select the root node (our CCSprite) is to select it from the timeline at
@@ -29,7 +29,7 @@ the bottom of the screen. Once you have selected the CCSprite, go to the
 right pane and set the "Sprite Frame" property to the
 *flyingpenguin.png* image:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_SetSpriteFrame.png)
+![image](./SpriteBuilder_Sprite_Frame.png)
 
 Now you should see the penguin image on the center of the stage.
 
@@ -42,13 +42,13 @@ Select the penguin, open the third tab and check the box "Enable
 physics". Once you check the box, you will see 4 pink dots forming a
 rectangle. This shape represents the shape of your physics body:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_enablePhysics.png)
+![image](./Spritebuilder_enablePhysics.png)
 
 By default this body is a square. For our flying penguin a *circle*
 seems like a better choice, so change the physics shape in the dropdown
 accordingly:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_changePhysicsBody.png)
+![image](./SpriteBuilder_updatePhysicsBody.png)
 
 Note, that you can drag the pink points around to adjust the size and
 position of the physics body.
@@ -60,7 +60,7 @@ to this interface file (more on this later). We want the penguin to be
 linked to an Objective-C class called "Penguin" so go the right pane,
 open the second tab, and set the custom class property:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_CustomClass.png)
+![image](./Spritebuilder_CustomClass.png)
 
 That's it for now - our penguin is ready! You will learn how to
 initialize this custom CCSprite subclass very soon!
@@ -93,12 +93,12 @@ bar: File\>New\>File\>Objective-C Class) called "Penguin" and "Seal" and
 make them subclasses of CCSprite because the root nodes of Penguin.ccb
 and Seal.ccb are CCSprites as well:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Penguin_Xcode.png)
+![image](./SpriteBuilder_Xcode_Penguin.png)
 
 Please create the new file in the *Source* Folder of your project to
 keep a consistent structure:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Classes_Folder_Location.png)
+![image](./Spritebuilder_Classes_Folder_Location.png)
 
 **Don't forget to repeat this step for the Seal class.**
 
@@ -113,11 +113,11 @@ lines between @implementation and @end:
 
     - (id)init {
         self = [super init];
-        
+
         if (self) {
             CCLOG(@"Penguin created");
         }
-        
+
         return self;
     }
 
@@ -129,11 +129,11 @@ between @implementation and @end:
 
     - (id)init {
         self = [super init];
-        
+
         if (self) {
             CCLOG(@"Seal created");
         }
-        
+
         return self;
     }
 
@@ -147,12 +147,12 @@ method:
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
         [...]
-        
+
         [self setupCocos2dWithOptions:cocos2dSetup];
-        
+
         [CCBReader load:@"Penguin"];
         [CCBReader load:@"Seal"];
-        
+
         return YES;
     }
 
@@ -161,7 +161,7 @@ loaded immediately, causing a Seal and Penguin object to be initialized.
 Two log messages should appear in your console log. Run the app and
 check the console for the correct output:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_CodeConnectionTest.png)
+![image](./Spritebuilder_CodeConnectionTest.png)
 
 *Note: if the console does not appear, check if you have set the two
 options highlighted in the screenshot correctly*

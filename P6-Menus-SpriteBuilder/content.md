@@ -24,7 +24,7 @@ the screen by keeping the default anchor point (0.5, 0.5) and setting
 the position *relative to % of parent container* for x and y and
 choosing 50% for each:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Center_Image.png)
+![image](./Spritebuilder_Center_Image.png)
 
 Positioning the sprite this way ensures it will always be centered -
 independent of the screen size.
@@ -41,7 +41,7 @@ now; you need to change another setting: *Preferred Size* should be
 (167.0, 152.0). The preferred size needs to be 50% of the image size for
 retina images. As a last step delete the "title" of the button:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_setupButton.png)
+![image](./Spritebuilder_setupButton.png)
 
 Link a method to the play button
 ================================
@@ -54,7 +54,7 @@ invoked when the button is pressed. For the *Target* select "Document
 root". This will cause the method to be invoked on the root node of this
 .ccb file:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_CodeConnection_Menu.png)
+![image](./Spritebuilder_CodeConnection_Menu.png)
 
 Now there's one last thing to check before we open Xcode and add some
 code to be executed when the play button is pressed. I just explained
@@ -66,7 +66,7 @@ Select the root node, CCNode, on the timeline then open the second tab
 on the right panel again and check the value of the *Custom class*
 field:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Custom_Class_2.png)
+![image](./Spritebuilder_Custom_Class_2.png)
 
 The value should be *MainScene*. This value is set by SpriteBuilder by
 default. Alltogether this means: *When the play button is pressed, the
@@ -89,7 +89,7 @@ method:
 Now you are ready to run the project. Whenever you touch the play button
 you should see "play button pressed" appear in the console:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/PlayButton.gif)
+![image](./PlayButton.gif)
 
 Create the Gameplay Scene
 =========================
@@ -101,7 +101,7 @@ implementing all the fun!)
 Go back to your SpriteBuilder project. Create a new File titled
 Gameplay. Select *Layer* as the root node type. Set the size to 960x320:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_Gameplay_Scene.png)
+![image](./Spritebuilder_Gameplay_Scene.png)
 
 Hit the publish the button in SpriteBuilder.
 

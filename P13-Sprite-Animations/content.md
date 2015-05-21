@@ -23,7 +23,7 @@ Smart Sprite Sheet*. Hit the publish button so that SpriteBuilder
 creates a texture for your sprite sheet. When you are done your project
 should look like this:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_Sprite_Animation.png)
+![image](./SpriteBuilder_Sprite_Animation.png)
 
 Create a new interface file
 ===========================
@@ -34,7 +34,7 @@ Next, create a new interface file in SpriteBuilder. Call it
 Once the file is created, open it and select the first animation frame
 to be the default frame of the new sprite (*animation/1.png*):
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_AnimatedPenguin.png)
+![image](./Spritebuilder_AnimatedPenguin.png)
 
 Setup the animation
 ===================
@@ -51,14 +51,14 @@ Depending on the amount of frames you will have to wait a couple of
 seconds. Then SpriteBuilder will add all images to your timeline. Here's
 a short visual walkthrough:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteAnimationManual.gif)
+![image](./SpriteAnimationManual.gif)
 
 Now you have an animated penguin! Next, let's reduce the length of the
 timeline. The animation is about 4 seconds. You also need to chain the
 timeline to itself, so that the penguins blink and jump in an endless
 loop:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SetTimeline.gif)
+![image](./SetTimeline.gif)
 
 Now publish your SpriteBuilder project before adding the waiting
 penguins to the *Gameplay* scene.
@@ -70,12 +70,12 @@ Drag *WaitingPenguin.ccb* to the *Gameplay.ccb* to add three waiting
 penguins. Make sure that the waiting penguins are children of the
 content node (otherwise they won't scroll away with the scene):
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Spritebuilder_WaitingPenguins.png)
+![image](./Spritebuilder_WaitingPenguins.png)
 
 Now publish and run your game. You should see the three penguins
 blinking and jumping next to the catapult:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SynchPenguinAnimation.gif)
+![image](./SynchPenguinAnimation.gif)
 
 Unsynchronize the animations
 ============================
@@ -87,17 +87,17 @@ animation starts as soon as the object enters the screen. We are going
 to change that, by triggering the start of the animation in code,
 instead of using the *Autoplay* setting of the timeline.
 
-As of SpriteBuilder 1.1 we need to have at least one Timeline that has *Autoplay* activated. That means we need to create another empty Timeline before we can turn off *Autoplay* for the current one. 
+As of SpriteBuilder 1.1 we need to have at least one Timeline that has *Autoplay* activated. That means we need to create another empty Timeline before we can turn off *Autoplay* for the current one.
 
 Create a new empty Timeline, rename the timeline with the animation from *Default Timeline* to *BlinkAndJump* and
 deactivate *Autoplay* for it:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/timeline_fix_1-1.gif)
+![image](./timeline_fix_1-1.gif)
 
 Also set a custom class called *WaitingPenguin*, so that we can add code
 to kick of the animation manually:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/SpriteBuilder_WaitingPenguinCodeConnect.png)
+![image](./SpriteBuilder_WaitingPenguinCodeConnect.png)
 
 Now publish your project and open Xcode!
 
@@ -134,6 +134,6 @@ Each timeline can be started referencing it by it's name.
 Now build and run the project again. The animation should look a lot
 more natural now:
 
-![image](https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/UnSynchPenguinAnimation.gif)
+![image](./UnSynchPenguinAnimation.gif)
 
 Well done! You now have mastered sprite animations in SpriteBuilder.
