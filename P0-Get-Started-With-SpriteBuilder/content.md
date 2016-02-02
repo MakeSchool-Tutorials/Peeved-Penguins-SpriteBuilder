@@ -26,7 +26,7 @@ like:
 ![image](./Peeved_Preview.png)
 
 You can access the code for the completed tutorial on
-[GitHub](https://github.com/MakeSchool/Spritebuilder-Getting-Started)!
+[GitHub](https://github.com/MakeSchool/PeevedPenguins-Swift)!
 
 [![GitHub](./Github.png)](https://github.com/MakeSchool/PeevedPenguins-Spritebuilder)
 
